@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/editProfilePicture"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        app:strokeWidth="8dp"
+        android:padding="8dp"
+        app:strokeColor="@color/design_default_color_primary"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:src="@drawable/profile_circle_128"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="Change Picture"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Name"
+        />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@drawable/edit_text_border"
+        android:textSize="16sp"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/editNameError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:text="Do not leave this field empty."
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Bio"
+        />
+
+    <EditText
+        android:id="@+id/editBio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@drawable/edit_text_border"
+        android:gravity="top"
+        android:hint="Tell about yourself!"
+        android:lines="3"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:textSize="20sp"
+        android:text="Submit" />
+
+</LinearLayout>

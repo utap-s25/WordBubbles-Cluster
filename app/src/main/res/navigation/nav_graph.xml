@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.wordbubblescluster.ui.LoginFragment" >
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_levelSelectFragment"
+        app:destination="@id/levelSelectFragment" />
+
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment" />
+
+    <fragment
+        android:id="@+id/levelSelectFragment"
+        android:name="com.example.wordbubblescluster.ui.LevelSelectFragment" >
+        <action
+            android:id="@+id/action_levelSelectFragment_to_profileFragment"
+            app:destination="@+id/profileFragment" />
+        <action
+            android:id="@+id/action_levelSelectFragment_to_leaderboardFragment"
+            app:destination="@+id/leaderboardFragment" />
+        <action
+            android:id="@+id/action_levelSelectFragment_to_gameFragment"
+            app:destination="@+id/gameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.wordbubblescluster.ui.ProfileFragment" >
+        <action android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@+id/editProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.wordbubblescluster.ui.EditProfileFragment">
+        <argument
+            android:name="profile"
+            app:argType="com.example.wordbubblescluster.model.Profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="com.example.wordbubblescluster.ui.LeaderboardFragment" >
+        <action
+            android:id="@+id/action_leaderboardFragment_to_profileOtherPlayerFragment"
+            app:destination="@id/profileOtherPlayerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileOtherPlayerFragment"
+        android:name="com.example.wordbubblescluster.ui.ProfileOtherPlayerFragment" >
+        <argument
+            android:name="profile"
+            app:argType="com.example.wordbubblescluster.model.Profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.wordbubblescluster.ui.GameFragment">
+        <argument
+            android:name="level"
+            app:argType="com.example.wordbubblescluster.model.Level" />
+    </fragment>
+
+</navigation>

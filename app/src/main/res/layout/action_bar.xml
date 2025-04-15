@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/actionTitle"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/actionButtonsGroup"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/actionLeaderboard"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:src="@drawable/leaderboard_48" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/actionProfile"
+            android:layout_marginStart="5dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:strokeWidth="3dp"
+            android:padding="3dp"
+            app:strokeColor="@color/design_default_color_primary"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            android:layout_gravity="center"
+            android:src="@drawable/profile_circle_48" />
+
+    </LinearLayout>
+
+</RelativeLayout>
